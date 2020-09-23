@@ -108,5 +108,5 @@ if __name__ == '__main__' :
     Linked.travers()
     # print(Linked.isexist('Hamza'))
     print(Linked.travers_asList())
-    Linked.insert("Hamza",'Hafsa','Laylay',1,2,3)
+    Linked.insert("Hamza",'OPLEX','Laylay',1,2,3)
     Linked.travers()
