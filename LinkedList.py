@@ -9,14 +9,14 @@ class  LinkedList :
             New_Node = Node(data)   # Creat New Node using Node(data) and save it in New_Node Var
             New_Node.next = self.startnode  # Change New_Node.next from Null to the current value of self.startnode
             self.startnode = New_Node   # After that the Startnode will be the New_Node
-    def insert(self,beforiteam,*argv) : # insert on random place
+    def insert(self,beforiteam,*argv) : # start inserting after the beforiteam
         if self.isexist(beforiteam) == True :
-            BeforeIteamObject = self.isexist(beforiteam,ReturnJustObject=True)
-            for data in argv :
-                NewObjectNode = Node(data)
-                NewObjectNode.next = BeforeIteamObject.next
-                BeforeIteamObject.next = NewObjectNode
-                BeforeIteamObject = NewObjectNode
+            BeforeIteamObject = self.isexist(beforiteam,ReturnJustObject=True) #  => search for the the beforiteam and return his object
+            for data in argv :      # loop into argv
+                NewObjectNode = Node(data)  #for each data in argv creat New Node
+                NewObjectNode.next = BeforeIteamObject.next  # The Next of The new object will be the next of the Beforiteam
+                BeforeIteamObject.next = NewObjectNode       # The Next of The Beforiteam will be the NewObject
+                BeforeIteamObject = NewObjectNode            # BeforIteam will be the NewObject , for make the same operation with other iteam in argv
         else:
             print('Befor Iteam not Found !')
 
